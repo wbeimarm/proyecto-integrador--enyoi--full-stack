@@ -3,13 +3,13 @@ const pool = require('../db/db');
 const buscarUsuario = async(req, res) => {
     const { usuario, clave } = req.body;
 
-    if (!usuario || clave) {
+    if (!usuario || !clave) {
         return res.status(400).json({ mensaje: 'Usuario y clave son obligatorios' });
     }
 
     try {
         const resultado = await pool.query(
-            'SELECT id FROM usuarios WHERE usuario = $1 AND $2', [usuario, clave]
+            'SELECT id FROM usuarios WHERE usuario = $1 AND clave = $2', [usuario, clave]
         );
 
         if (resultado.rows.length > 0) {
@@ -22,4 +22,5 @@ const buscarUsuario = async(req, res) => {
         res.status(500).json({ mensaje: 'Error interno del servidor' });
     }
 };
+
 module.exports = { buscarUsuario };
