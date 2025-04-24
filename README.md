@@ -66,9 +66,6 @@ DB_NAME=tu_base_de_datos
 DB_PORT=5432
 ```
 
-❗ **No subas este archivo a GitHub** (debe estar en `.gitignore` para mantener tu información segura).
-
----
 
 ## Para hacer la prueba
 
