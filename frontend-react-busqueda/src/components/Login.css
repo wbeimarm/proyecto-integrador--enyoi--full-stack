@@ -1,52 +1,66 @@
-/* Estilo general */
+/* Fondo y alineación general */
 
 body {
     font-family: Arial, sans-serif;
     background: #f3f4f6;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
     margin: 0;
 }
 
 
-/* Título principal */
+/* Contenedor principal del login */
+
+.contenedor {
+    text-align: center;
+}
+
+
+/* Título principal: Proyecto Enyoi Full Stack */
 
 .titulo {
     font-family: 'Impact', 'Arial Black', sans-serif;
     color: #e63946;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+
+/* Subtítulo: Buscar Usuario */
+
+h2 {
+    font-size: 1.5rem;
+    color: #1d3557;
+    margin-bottom: 20px;
 }
 
 
 /* Formulario */
 
 .formulario {
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
 
-/* Inputs */
+/* Inputs de usuario y clave */
 
-input[type="text"],
-input[type="password"] {
+input {
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 8px;
+    border: 1px solid #ccc;
     font-size: 1rem;
-    transition: border 0.3s;
 }
 
 input:focus {
@@ -55,7 +69,7 @@ input:focus {
 }
 
 
-/* Botón */
+/* Botón de buscar */
 
 button {
     background-color: #e63946;
@@ -73,7 +87,7 @@ button:hover {
 }
 
 
-/* Resultado */
+/* Resultado del servidor */
 
 #resultado {
     margin-top: 20px;
