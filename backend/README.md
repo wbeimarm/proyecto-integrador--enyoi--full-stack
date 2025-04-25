@@ -106,6 +106,76 @@ Una vez que hayas instalado las dependencias y configurado tu base de datos, pue
 
 ---
 
+
+## Frontend del proyecto
+
+Este proyecto también tiene una parte visual (frontend), que fue creada usando React con la herramienta Vite (que ayuda a que todo funcione rápido y más simple para nosotros los que estamos aprendiendo).
+
+### ¿Qué hace el frontend?
+
+El frontend muestra una interfaz donde se puede escribir el nombre de usuario y la clave, y al hacer clic en un botón, se conecta con el backend, para verificar si ese usuario existe o no. Si lo encuentra, muestra el ID; si no, dice que no existe.
+
+### ¿Cómo fue creado el frontend?
+
+Yo seguí estos pasos para crearlo desde cero.
+
+```bash
+npm create vite@latest
+```
+
+Ahí le puse un nombre (en este caso fue algo como `frontend`), seleccioné React y JavaScript.
+
+Después entré a la carpeta y le instalé las dependencias:
+
+```bash
+cd frontend-react-busqueda
+npm install
+```
+
+### Estructura del frontend
+
+```bash
+frontend/
+│
+├── public/
+│   └── vite.svg
+│
+├── src/
+│   ├── App.jsx                # Aquí está la lógica principal de la interfaz
+│   ├── main.jsx               # Punto de entrada de React
+│   └── index.css              # Estilos generales
+│
+├── package.json               # Lista de dependencias y scripts
+├── vite.config.js             # Configuración de Vite
+```
+
+### Dependencias del frontend
+
+Cuando instalé las cosas, se agregaron automáticamente estas dependencias:
+
+- **react**: Para crear componentes y la interfaz.
+- **react-dom**: Para conectar React con el navegador.
+- **vite**: Herramienta para correr y construir el proyecto más fácil y rápido.
+
+### ¿Cómo probar el frontend?
+
+Una vez que estés dentro de la carpeta `frontend/`, puede hacer lo siguiente:
+
+```bash
+npm install
+npm run dev
+```
+
+Después de eso, te aparecerá una dirección como esta en la terminal:
+
+```
+http://localhost:5173/
+```
+
+Solo la abres en tu navegador, y ya puedes usar la aplicación visual.
+
+---
+
 ## Autor
 
 - **Wbeimar Monsalve**
